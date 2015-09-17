@@ -12,6 +12,7 @@
 		A3FD203B1BAB6EF60002B587 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3FD20391BAB6EF60002B587 /* Main.storyboard */; };
 		A3FD203D1BAB6EF60002B587 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3FD203C1BAB6EF60002B587 /* Assets.xcassets */; };
 		A3FD20401BAB6EF60002B587 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3FD203E1BAB6EF60002B587 /* LaunchScreen.storyboard */; };
+		A3FD25E41BAB703B0002B587 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = A3FD25E31BAB703B0002B587 /* pokemon.csv */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		A3FD203C1BAB6EF60002B587 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3FD203F1BAB6EF60002B587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3FD20411BAB6EF60002B587 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3FD25E31BAB703B0002B587 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		A3FD20341BAB6EF60002B587 /* PokeDex */ = {
 			isa = PBXGroup;
 			children = (
+				A3FD25E31BAB703B0002B587 /* pokemon.csv */,
 				A3FD20351BAB6EF60002B587 /* AppDelegate.swift */,
 				A3FD20371BAB6EF60002B587 /* ViewController.swift */,
 				A3FD20391BAB6EF60002B587 /* Main.storyboard */,
@@ -122,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3FD20401BAB6EF60002B587 /* LaunchScreen.storyboard in Resources */,
+				A3FD25E41BAB703B0002B587 /* pokemon.csv in Resources */,
 				A3FD203D1BAB6EF60002B587 /* Assets.xcassets in Resources */,
 				A3FD203B1BAB6EF60002B587 /* Main.storyboard in Resources */,
 			);
