@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -30,20 +31,76 @@
                                 <rect key="frame" x="0.0" y="55" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="E7q-70-lUu">
+                                <rect key="frame" x="20" y="119" width="560" height="461"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rJu-GR-vJp">
+                                    <size key="itemSize" width="99" height="96"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" id="1wC-26-zzM">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="110"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="8OV-Yu-KvS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="90"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.64000000000000001" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8F-G1-jnC">
+                                                    <rect key="frame" x="0.0" y="89" width="100" height="21"/>
+                                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="8OV-Yu-KvS" firstAttribute="leading" secondItem="1wC-26-zzM" secondAttribute="leading" id="2xO-4Y-5Qc"/>
+                                            <constraint firstItem="u8F-G1-jnC" firstAttribute="leading" secondItem="1wC-26-zzM" secondAttribute="leading" id="dpb-rS-JaD"/>
+                                            <constraint firstAttribute="trailing" secondItem="u8F-G1-jnC" secondAttribute="trailing" id="nv7-bv-uTk"/>
+                                            <constraint firstAttribute="trailing" secondItem="8OV-Yu-KvS" secondAttribute="trailing" id="ozy-IU-pQF"/>
+                                            <constraint firstItem="8OV-Yu-KvS" firstAttribute="top" secondItem="1wC-26-zzM" secondAttribute="top" id="q2t-a8-1gL"/>
+                                            <constraint firstAttribute="bottom" secondItem="u8F-G1-jnC" secondAttribute="bottom" id="whQ-J7-cVa"/>
+                                        </constraints>
+                                        <size key="customSize" width="100" height="110"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="q91-gl-2e2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2zj-ub-0PO"/>
+                            <constraint firstItem="E7q-70-lUu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="7Jt-4D-gG0"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="q91-gl-2e2" secondAttribute="bottom" id="IXM-nN-ie5"/>
+                            <constraint firstItem="E7q-70-lUu" firstAttribute="top" secondItem="Jkk-WQ-Q5d" secondAttribute="bottom" constant="20" id="LZx-hN-pKw"/>
                             <constraint firstItem="Jkk-WQ-Q5d" firstAttribute="top" secondItem="EDD-zA-Egq" secondAttribute="bottom" id="NN4-gg-f77"/>
+                            <constraint firstAttribute="trailing" secondItem="E7q-70-lUu" secondAttribute="trailing" constant="20" id="NRQ-aq-WCB"/>
                             <constraint firstAttribute="trailing" secondItem="q91-gl-2e2" secondAttribute="trailing" id="OvI-bw-AAh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="E7q-70-lUu" secondAttribute="bottom" constant="20" id="Sba-Uh-RUK"/>
                             <constraint firstAttribute="trailing" secondItem="EDD-zA-Egq" secondAttribute="trailing" id="U0z-J5-Jsr"/>
                             <constraint firstAttribute="trailing" secondItem="Jkk-WQ-Q5d" secondAttribute="trailing" id="UPi-cq-Vla"/>
+                            <constraint firstItem="E7q-70-lUu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="20" id="V57-oH-ziI"/>
                             <constraint firstItem="Jkk-WQ-Q5d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iOV-SE-NgH"/>
+                            <constraint firstItem="E7q-70-lUu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="qut-A6-69Q"/>
                             <constraint firstItem="q91-gl-2e2" firstAttribute="top" secondItem="EDD-zA-Egq" secondAttribute="bottom" id="sQp-B4-bfC"/>
                             <constraint firstItem="EDD-zA-Egq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sgX-m0-VNv"/>
                             <constraint firstItem="EDD-zA-Egq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xGt-fp-qfE"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7Jt-4D-gG0"/>
+                                <exclude reference="V57-oH-ziI"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -52,6 +109,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="120" height="120"/>
         <image name="bg" width="1920" height="1080"/>
     </resources>
 </document>
