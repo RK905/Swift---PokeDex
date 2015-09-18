@@ -52,14 +52,14 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Jkk-WQ-Q5d">
+                            <searchBar contentMode="redraw" placeholder="Seach Pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="Jkk-WQ-Q5d">
                                 <rect key="frame" x="0.0" y="46" width="600" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="e2V-BG-cbQ"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="E7q-70-lUu">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="E7q-70-lUu">
                                 <rect key="frame" x="20" y="110" width="560" height="470"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -141,6 +141,7 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="E7q-70-lUu" id="TLn-jh-dS1"/>
+                        <outlet property="searchBar" destination="Jkk-WQ-Q5d" id="RKq-fe-Ilk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
