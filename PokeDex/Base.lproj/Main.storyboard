@@ -10,6 +10,35 @@
         </mutableArray>
     </customFonts>
     <scenes>
+        <!--Pokemon DetailVC-->
+        <scene sceneID="AnI-4W-AGF">
+            <objects>
+                <viewController id="dWR-l4-J45" customClass="PokemonDetailVC" customModule="PokeDex" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SQo-37-Xql"/>
+                        <viewControllerLayoutGuide type="bottom" id="9su-GN-mPn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wG1-Bk-DcC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlb-74-R1S">
+                                <rect key="frame" x="279" y="28" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="pokemonName" destination="dlb-74-R1S" id="JRj-e7-5hU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fuo-IY-dAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001" y="341"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -142,6 +171,7 @@
                     <connections>
                         <outlet property="collection" destination="E7q-70-lUu" id="TLn-jh-dS1"/>
                         <outlet property="searchBar" destination="Jkk-WQ-Q5d" id="RKq-fe-Ilk"/>
+                        <segue destination="dWR-l4-J45" kind="show" identifier="PokemonDetailVC" id="5yQ-5h-In3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
