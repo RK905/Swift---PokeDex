@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var collection: UICollectionView!
+//    @IBOutlet weak var musicButton: UIButton!
     
     
     var pokemon = [Pokemon]()
+    
+    var musicPlayer:AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +28,42 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Do any additional setup after loading the view, typically from a nib.
         
         parsePokemonCSV()
+        initAudio()
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
+    func initAudio(){
+        let path = NSBundle.mainBundle().pathForResource("music", ofType: "mp3")!
+        do {
+            musicPlayer=try AVAudioPlayer(contentsOfURL: NSURL(string: path)!)
+            musicPlayer.prepareToPlay()
+            musicPlayer.numberOfLoops = -1
+            musicPlayer.play()
+        }
+        catch let err as NSError{
+            print(err.debugDescription)
+        }
     }
     
     
     
+//    @IBAction func pressMusicBtn(sender: UIButton!) {
+//        
+//        if musicPlayer.playing{
+//            musicPlayer.stop()
+//            sender.alpha = 0.2
+//        }
+//        else{
+//            musicPlayer.play()
+//            sender.alpha = 1.0
+//        }
+//        
+//        
+//    }
+ 
     func parsePokemonCSV(){
         let path = NSBundle.mainBundle().pathForResource("pokemon", ofType: "csv")!
         do {
