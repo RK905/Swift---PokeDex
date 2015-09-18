@@ -14,6 +14,8 @@
 		A3FD20401BAB6EF60002B587 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3FD203E1BAB6EF60002B587 /* LaunchScreen.storyboard */; };
 		A3FD25E41BAB703B0002B587 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = A3FD25E31BAB703B0002B587 /* pokemon.csv */; settings = {ASSET_TAGS = (); }; };
 		A3FD25E71BAB785C0002B587 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FD25E61BAB785C0002B587 /* Pokemon.swift */; settings = {ASSET_TAGS = (); }; };
+		A3FD25EA1BAB8CF60002B587 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FD25E91BAB8CF60002B587 /* PokeCell.swift */; settings = {ASSET_TAGS = (); }; };
+		A3FD25EC1BAB9F250002B587 /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FD25EB1BAB9F250002B587 /* csv.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		A3FD20411BAB6EF60002B587 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3FD25E31BAB703B0002B587 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 		A3FD25E61BAB785C0002B587 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		A3FD25E91BAB8CF60002B587 /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
+		A3FD25EB1BAB9F250002B587 /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +62,10 @@
 		A3FD20341BAB6EF60002B587 /* PokeDex */ = {
 			isa = PBXGroup;
 			children = (
-				A3FD25E51BAB783F0002B587 /* Pokemon */,
-				A3FD25E31BAB703B0002B587 /* pokemon.csv */,
+				A3FD25F01BAB9F630002B587 /* Utils */,
+				A3FD25EF1BAB9F460002B587 /* Controller */,
+				A3FD25EE1BAB9F3F0002B587 /* View */,
+				A3FD25ED1BAB9F390002B587 /* Model */,
 				A3FD20351BAB6EF60002B587 /* AppDelegate.swift */,
 				A3FD20371BAB6EF60002B587 /* ViewController.swift */,
 				A3FD20391BAB6EF60002B587 /* Main.storyboard */,
@@ -76,6 +82,46 @@
 				A3FD25E61BAB785C0002B587 /* Pokemon.swift */,
 			);
 			name = Pokemon;
+			sourceTree = "<group>";
+		};
+		A3FD25E81BAB8CAC0002B587 /* PokeCell */ = {
+			isa = PBXGroup;
+			children = (
+				A3FD25E91BAB8CF60002B587 /* PokeCell.swift */,
+			);
+			name = PokeCell;
+			sourceTree = "<group>";
+		};
+		A3FD25ED1BAB9F390002B587 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A3FD25E51BAB783F0002B587 /* Pokemon */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A3FD25EE1BAB9F3F0002B587 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A3FD25E81BAB8CAC0002B587 /* PokeCell */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A3FD25EF1BAB9F460002B587 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A3FD25F01BAB9F630002B587 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A3FD25EB1BAB9F250002B587 /* csv.swift */,
+				A3FD25E31BAB703B0002B587 /* pokemon.csv */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +195,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3FD25EA1BAB8CF60002B587 /* PokeCell.swift in Sources */,
 				A3FD20381BAB6EF60002B587 /* ViewController.swift in Sources */,
 				A3FD20361BAB6EF60002B587 /* AppDelegate.swift in Sources */,
 				A3FD25E71BAB785C0002B587 /* Pokemon.swift in Sources */,
+				A3FD25EC1BAB9F250002B587 /* csv.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +349,7 @@
 				A3FD20461BAB6EF60002B587 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

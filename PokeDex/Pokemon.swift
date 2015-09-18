@@ -24,7 +24,7 @@ class Pokemon{
     
     
     init(name: String, pokeID:Int){
-        self._name = name
+        self._name = name.localizedUppercaseString
         self._pokeID = pokeID
     }
     
