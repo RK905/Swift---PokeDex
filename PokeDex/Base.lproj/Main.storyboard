@@ -22,22 +22,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlb-74-R1S">
-                                <rect key="frame" x="279" y="28" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slj-dg-cjP">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="46"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PokeDex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gj5-ki-Xaj">
+                                        <rect key="frame" x="222" y="5" width="156" height="33"/>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="26"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Le8-U8-2cF">
+                                        <rect key="frame" x="4" y="6" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="GF6-hS-ewN"/>
+                                            <constraint firstAttribute="width" constant="46" id="R7F-Ev-EVN"/>
+                                        </constraints>
+                                        <state key="normal" image="backBtn"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="EwV-xI-hWD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Le8-U8-2cF" firstAttribute="leading" secondItem="slj-dg-cjP" secondAttribute="leading" constant="4" id="9Zg-Qc-NpD"/>
+                                    <constraint firstAttribute="bottom" secondItem="Le8-U8-2cF" secondAttribute="bottom" constant="10" id="BaL-62-YTM"/>
+                                    <constraint firstItem="Gj5-ki-Xaj" firstAttribute="centerX" secondItem="slj-dg-cjP" secondAttribute="centerX" id="W1H-zn-wPQ"/>
+                                    <constraint firstItem="Gj5-ki-Xaj" firstAttribute="centerY" secondItem="slj-dg-cjP" secondAttribute="centerY" id="YPf-JX-TgN"/>
+                                    <constraint firstItem="Le8-U8-2cF" firstAttribute="top" secondItem="slj-dg-cjP" secondAttribute="top" constant="6" id="iO7-9l-q65"/>
+                                    <constraint firstAttribute="height" constant="46" id="wDA-xg-zbb"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="slj-dg-cjP" secondAttribute="trailing" id="WC1-2c-kcx"/>
+                            <constraint firstItem="slj-dg-cjP" firstAttribute="leading" secondItem="wG1-Bk-DcC" secondAttribute="leading" id="kKD-rG-uMp"/>
+                            <constraint firstItem="slj-dg-cjP" firstAttribute="top" secondItem="wG1-Bk-DcC" secondAttribute="top" id="stS-xT-7Or"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="pokemonName" destination="dlb-74-R1S" id="JRj-e7-5hU"/>
+                        <outlet property="pokemonName" destination="Gj5-ki-Xaj" id="LQu-NT-j0C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fuo-IY-dAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001" y="341"/>
+            <point key="canvasLocation" x="990" y="333"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -181,6 +211,7 @@
     </scenes>
     <resources>
         <image name="1" width="120" height="120"/>
+        <image name="backBtn" width="85" height="50"/>
         <image name="bg" width="1920" height="1080"/>
     </resources>
 </document>

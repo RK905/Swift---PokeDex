@@ -21,6 +21,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var musicPlayer:AVAudioPlayer!
     
     var inSearchMode = false
+ 
     var filteredPokemon = [Pokemon]()
     
     override func viewDidLoad() {
@@ -34,7 +35,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         parsePokemonCSV()
         initAudio()
-    }
+        
+               }
     
     override func prefersStatusBarHidden() -> Bool {
         return true
@@ -47,6 +49,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             musicPlayer.prepareToPlay()
             musicPlayer.numberOfLoops = -1
             musicPlayer.play()
+           
         }
         catch let err as NSError{
             print(err.debugDescription)
@@ -125,7 +128,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
         performSegueWithIdentifier("PokemonDetailVC", sender:poke)
-            
+        
+       musicPlayer.stop()
+        
         }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

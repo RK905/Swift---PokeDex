@@ -16,7 +16,11 @@ class PokemonDetailVC: UIViewController {
     override func viewDidLoad() {
      super.viewDidLoad()
         
-        pokemonName.text = pokemon.name
+        pokemonName.text = pokemon.name.capitalizedString
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
 
 }
